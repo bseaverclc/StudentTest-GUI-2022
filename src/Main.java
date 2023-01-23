@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args){
-
+        // made a change with intellij on 1/23
       // made a change on repl.it 1/23
         ArrayList<Student> students = new ArrayList<Student>();
 
@@ -38,12 +38,21 @@ public class Main {
             }
         });
 
+        JButton delete = new JButton(("delete"));
+        delete.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                area.setText("");
+            }
+        });
+
         panel.add(firstField);
         panel.add(lastField);
         panel.add(yearField);
         panel.add(submit);
         panel.add(seeButton);
         panel.add(area);
+        panel.add(delete);
 
         frame.add(panel);
 
